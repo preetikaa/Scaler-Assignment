@@ -11,20 +11,6 @@ export const createFeedback = async (req, res, next) => {
   }
 };
 
-// export const updateFeedback = async (req, res, next) => {
-//   try {
-//     const updatedJob = await Job.findByIdAndUpdate(
-//       req.params.id,
-//       {
-//         $set: req.body,
-//       },
-//       { new: true }
-//     );
-//     res.status(200).json(updatedJob);
-//   } catch (error) {
-//     res.status(500).json(error);
-//   }
-// };
 
 export const deleteFeedback = async (req, res, next) => {
   try {

@@ -11,5 +11,8 @@ Steps to run:
     npm install
     npm start
 
+For login:
+username: admin
+password: admin
 Preetika Pargai
 E21CSEU0029

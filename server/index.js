@@ -20,7 +20,7 @@ import tripRouter from "./routes/trips.js";
 const app = express();
 dotenv.config();
 
-//making the db connection function
+
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URL);

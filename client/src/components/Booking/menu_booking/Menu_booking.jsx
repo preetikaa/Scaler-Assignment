@@ -22,15 +22,6 @@ const Menu = () => {
       >
         BOOKING RECORDS
       </NavLink>
-
-
-      {/* <NavLink
-        to="/booking/GenReport"
-        style={{ textDecoration: "none" }}
-        className="GenReport"
-      >
-        GENERATE REPORTS
-      </NavLink> */}
       
       <NavLink
         to="/booking/BookingSearch"

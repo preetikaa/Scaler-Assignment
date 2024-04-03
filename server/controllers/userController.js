@@ -5,7 +5,7 @@ export const createUser = async (req, res, next) => {
     password: req.body.password,
   });
 
-  //Password encryption using crypto-js
+
   newUser
     .save()
     .then((user) => res.json(user))
@@ -21,7 +21,7 @@ export const loginUser = async (req, res, next) => {
       if (user.password !== req.body.password) {
         return res.status(401).json({ message: "Incorrect password" });
       }
-      res.json(user); //return _id and accountType as a JSON at least..account Type is a must...in here I return the whole user object
+      res.json(user); 
     })
     .catch((err) => res.status(500).json({ message: "Could not login user" }));
 };

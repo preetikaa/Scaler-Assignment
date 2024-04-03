@@ -33,52 +33,6 @@ const Datatable_booking = () => {
     }
   };
 
-  //    const handlesearch1=(event1)=>{
-  //     const getSearch = event1.target.value;
-  //     setQuery(getSearch);
-  //     if(getSearch.length > 0){
-  //         const searchdata = list.filter((item)=> item.bookingid.toLowerCase().
-  //         includes(getSearch));
-  //         setList(searchdata);
-  //     }
-  //     else{
-  //         setList(filterdata);
-  //     }
-
-  // };
-
-  // const handlesearch = (event) => {
-  //   const getSearch = event.target.value;
-  //   setQuery(getSearch);
-
-  //   if (getSearch.length > 0) {
-  //     const searchdata = list.filter(
-  //       (item) =>
-  //         item.checkin.toLowerCase().includes(getSearch) ||
-  //         item.checkout.toLowerCase().includes(getSearch)
-  //     );
-  //     setList(searchdata);
-  //   } else {
-  //     setList(filterdata);
-  //   }
-  // };
-
-  // const handlesearch1 = (event1) => {
-  //   const getSearch = event1.target.value;
-  //   setQuery(getSearch);
-
-  //   if (getSearch.length > 0) {
-  //     const searchdata = list.filter(
-  //       (item) =>
-  //         item.checkin.toLowerCase().includes(getSearch) ||
-  //         item.checkout.toLowerCase().includes(getSearch)
-  //     );
-  //     setList(searchdata);
-  //   } else {
-  //     setList(filterdata);
-  //   }
-  // };
-
   useEffect(() => {
     setList(data);
     setFilterdata(data);
@@ -105,9 +59,6 @@ const Datatable_booking = () => {
     } catch (err) {}
   };
 
-  // function handleEdit(id){
-  //     setUpdatestate(id)
-  // }
 
   const actionColoumn = [
     {
@@ -169,23 +120,13 @@ const Datatable_booking = () => {
         ],
       ],
       body: list.map((item) => [
-        // item.bookingid,
-        item.nic, /// real item variable (in form useState)
+        item.nic, 
         item.name,
         item.phone,
-        // item.address1,
-        // item.address2,
-        // item.city,
-        // item.state,
-        // item.zip,
         item.email,
         item.checkin,
-        // item.checkout,
-        // item.roomtype,
         item.roomCount,
         item.totRoom,
-        // item.noadults,
-        // item.nochildren,
       ]),
     });
     doc.save("Room Booking.pdf"); /// download pdf name
@@ -213,7 +154,7 @@ const Datatable_booking = () => {
         <label
           style={{ textAlign: "left", marginRight: "10px", fontWeight: "bold" }}
         >
-          Checking Date
+          Check-In Date
         </label>
         <input
           type="date"
@@ -223,22 +164,6 @@ const Datatable_booking = () => {
           placeholder="Select Check In Date"
         />
       </div>
-
-      {/* <div className="datatableTitle">
-
-            <label style={{ textAlign: 'left', marginRight: '10px', fontWeight: 'bold' }}>
-            Booking ID
-                </label>
-                    <input  type="String" 
-                    value ={query}
-                    className="Search"
-                    onChange={(e)=>handlesearch1(e)}
-                    placeholder="Select Booking ID"
-                    /> 
-                
-
-            </div> */}
-
       <DataGrid
         className="datagrid"
         rows={list}

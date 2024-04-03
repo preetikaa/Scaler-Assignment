@@ -186,16 +186,6 @@ const AddBookingForm = () => {
       <form onSubmit={handleSubmit}>
         <h3> ADD NEW ROOM BOOKING </h3>
 
-        {/* <label> Booking ID </label>
-        <input
-          type="text"
-          placeholder="Enter Booking ID "
-          required
-          readOnly
-          onChange={(e) => setBookingid(e.target.value)}
-          value={bookingid}
-        /> */}
-
         <label> Customer Name </label>
         <input
           type="text"
@@ -204,80 +194,6 @@ const AddBookingForm = () => {
           onChange={(e) => setName(e.target.value)}
           value={name}
         />
-
-        {/* <label>Customer NIC:</label>
-        <input
-          type="text"
-          minLength="10"
-          maxLength="12"
-          pattern=""
-          unique="true"
-          placeholder="Enter NIC"
-          required
-          onChange={(e) => setNic(e.target.value)}
-          value={nic}
-        /> */}
-
-        {/* <label> Contact Number:</label>
-        <input
-          type="tel"
-          pattern="^[0-9]{10}$"
-          placeholder="Enter Contact Number"
-          required
-          onChange={(e) => setPhone(e.target.value)}
-          value={phone}
-        /> */}
-
-        {/* <label> Address1 </label>
-        <input
-          type="text"
-          placeholder="Enter Address1 "
-          required
-          onChange={(e) => setAddress1(e.target.value)}
-          value={address1}
-        />
-
-        <label> Address2 </label>
-        <input
-          type="text"
-          placeholder="Enter Address2"
-          required
-          onChange={(e) => setAddress2(e.target.value)}
-          value={address2}
-        />
-
-        <label>City </label>
-        <input
-          type="text"
-          placeholder=" Enter City"
-          required
-          onChange={(e) => setCity(e.target.value)}
-          value={city}
-        />
-
-        <label>State </label>
-        <input
-          type="text"
-          placeholder=" Enter State"
-          required
-          onChange={(e) => setState(e.target.value)}
-          value={state}
-        />
-
-        <label> Zip Code</label>
-        <input
-          type="number"
-          placeholder="Enter Zip Code"
-          required
-          // onChange={(e) => setZip(e.target.value)}
-          onChange={(e) => {
-            const zipValue = e.target.value;
-            if (/^\d{0,5}$/.test(zipValue)) {
-              setZip(zipValue);
-            }
-          }}
-          value={zip}
-        /> */}
 
         <label> Email </label>
         <input
@@ -291,17 +207,6 @@ const AddBookingForm = () => {
 
         
 
-        {/* 
-                  onChange={(e) => {
-                    setCheckin(e.target.value);
-                    setCheckout(""); // reset checkout date
-                  }}
-             
-                  min={checkin ? checkin : new Date().toISOString().slice(0, 10)}
-                  max={new Date().toISOString().slice(0, 10)}
-              
-                /> */}
-
         <label>Room Type</label>
         <select value={roomtype} onChange={handleRoomTypeChange}>
           <option value="Luxary_Rooms">Luxary Rooms</option>
@@ -313,12 +218,9 @@ const AddBookingForm = () => {
 
         <input
           type="string"
-          // placeholder="Number Between 1 - 5"
-          // min="1"
-          // max="5"
           required
           value={roomCount}
-          onChange={handleRoomCountChange} // event handler to handle room count target values in here
+          onChange={handleRoomCountChange} 
         />
 
 <label> Check In Date </label>
@@ -339,46 +241,6 @@ const AddBookingForm = () => {
           value={checkout}
         />
 
-        {/* <label>Total value of the rooms</label>
-        <input
-          type="number"
-          placeholder="Value"
-          required
-          readOnly
-          onChange={(e) => settotRoom(e.target.value)}
-          value={totRoom}
-        />
-
-        <label> No Of Adults</label>
-        <input
-          type="number"
-          placeholder=" Enter No Of Adults"
-          min="1"
-          max="5"
-          required
-          onChange={(e) => setNoadults(e.target.value)}
-          value={noadults}
-        />
-
-        <label> No Of Children</label>
-        <input
-          type="number"
-          placeholder=" Enter No Of Children"
-          min="1"
-          max="10"
-          required
-          value={nochildren}
-          onChange={handleToT} // event handler to handle discount target values in here
-        /> */}
-        {/* <button type="submit">Submit</button> <br/> <br/>    
-        
-
-        <button onClick={() => window.location.reload()}> CANCEL </button>  */}
-
-        {/* <div style={{ display: 'flex' }}>
-  <button type="submit">Submit</button>
-  <button onClick={() => window.location.reload()}>CANCEL</button>
-</div> */}
 
         <div>
           <button type="submit">Submit</button>
